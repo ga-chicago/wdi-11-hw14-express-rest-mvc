@@ -1,4 +1,4 @@
-![ga](https://github.com/organizations/ga-chicago/settings/profile)
+![ga](https://avatars3.githubusercontent.com/u/12513784?s=200&v=4)
 
 # wdi-11-chi _curious-turtles_
 

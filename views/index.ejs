@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>views</h1>
+
+	<ul>
+
+	<% for (let i = 0; i < missionList.length; i++)  {%>
+
+	<li><a href="/marsMissions/<%= i %>"><%= missionList[i].name%></a></li>
+
+
+
+
+	<%}%>
+
+
+
+	</ul>
+
+
+</body>
+</html>
+
+
+

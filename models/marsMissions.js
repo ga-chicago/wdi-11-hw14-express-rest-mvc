@@ -4,35 +4,35 @@ const marsMissions = [
     launchDate: "26 Nov 2011",
     operator: "NASA",
     missionType: "Rover",
-    img: "/curiosity.jpeg"
+    img: "/img/curiosity.jpeg"
   },
   {
     name: "Opportunity",
     launchDate: "8 Jul 2003",
     operator: "NASA",
     missionType: "Rover",
-    img: "/opportunity.jpg"
+    img: "/img/opportunity.jpg"
   },
   {
     name: "Spirit",
     launchDate: "10 Jun 2003",
     operator: "NASA",
     missionType: "Rover",
-    img: "/spirit.jpg"
+    img: "/img/spirit.jpg"
   },
   {
     name: "Sojourner",
     launchDate: "4 Dec 1996",
     operator: "NASA",
     missionType: "Rover",
-    img: "/sojourner.jpg"
+    img: "/img/sojourner.jpg"
   },
   {
     name: "Rosetta",
     launchDate: "2 Mar 2004",
     operator: "ESA",
     missionType: "Gravity Assist",
-    img: "/rosetta.jpg"
+    img: "/img/rosetta.jpg"
   }
 ];
 

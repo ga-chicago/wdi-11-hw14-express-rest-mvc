@@ -42,7 +42,7 @@ app.get('/missions/:id',(req,res) => {
   })
 })
 
-app.use(express.static('./img'));
+app.use(express.static('./public'));
 
 // LISTENER
 app.listen(PORT, function() {

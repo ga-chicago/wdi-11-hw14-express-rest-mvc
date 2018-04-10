@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <center>
+    <h1 style = "color:red;">Mission SHOW PAGE</h1>
+    </center>
+
+    <%= missions.name %>, a <%= missions.missionType %> vehicle was launched on
+    <%= missions.launchDate %> by <%= missions.operator %>.
+
+    <img src= "<%= missions.img %>">
+
+
+    <!-- note: the <%= %> tag is for AN EXPRESSION.  -->
+    <!-- <% %> tag can have javascript inside -->
+
+  </body>
+</html>

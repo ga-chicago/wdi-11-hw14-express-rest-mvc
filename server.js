@@ -2,71 +2,46 @@
 const express = require('express');
 const app = express();
 
-// run `npm install` to install dependencies in package.json
+const missions = require('./models/marsMissions.js')
+// run `npm install` to install dependencies in package.json--DONE
 
 // * Your mission is to complete the app
-// * The app will need routes for index and show
-// * The app will need views for index and show
+// * The app will need routes for index and show- DONE
+// * The app will need views for index and show-DONE
 //
-// * Make it so you can click on a mission’s name on the index page, and be taken to that mission’s show page
+// * Make it so you can click on a mission’s name on the index page, and be taken to that mission’s show page- DONE
 // * Bonus: add images to the data and have them display
 // * Bonus: add static css to style the pages
 
 // NOTES:
-// ejs has not been installed
-// views folder has not been created
-// views/missions folder has not been created
+// ejs has not been installed -- DONE
+// views folder has not been created --DONE
+// views/missions folder has not been created --DONE
 
 // PORT
 const PORT = 3000;
 
-// DATA - put into marsMissions.js file inside of a models folder, for module.exports
-// remember to require it in the server
-const marsMissions = [
-  {
-    name: "Curiosity",
-    launchDate: "26 Nov 2011",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Opportunity",
-    launchDate: "8 Jul 2003",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Spirit",
-    launchDate: "10 Jun 2003",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Sojourner",
-    launchDate: "4 Dec 1996",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Rosetta",
-    launchDate: "2 Mar 2004",
-    operator: "ESA",
-    missionType: "Gravity Assist",
-    img: ""
-  }
-];
+
 
 // INDEX Route
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
+//INDEX route-- this will list all the routes
+app.get('/missions', (req, res) => {
+  res.render('index.ejs', {
+    missions: missions //<--the data
+  })
+});
+
 
 // SHOW Route
 // send data to 'missions/show.ejs' view
 // the view should display all the data for a single mission
+app.get('/missions/:id', (req, res) => {
+  res.render('show.ejs', {
+    missions: missions[req.params.id]
+  })
+});
 
 
 // LISTENER

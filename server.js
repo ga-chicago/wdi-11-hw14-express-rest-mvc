@@ -7,9 +7,9 @@ const missions = require('./models/marsMissions.js')
 
 // * Your mission is to complete the app
 // * The app will need routes for index and show- DONE
-// * The app will need views for index and show
+// * The app will need views for index and show-DONE
 //
-// * Make it so you can click on a mission’s name on the index page, and be taken to that mission’s show page
+// * Make it so you can click on a mission’s name on the index page, and be taken to that mission’s show page- DONE
 // * Bonus: add images to the data and have them display
 // * Bonus: add static css to style the pages
 // NOTES:
@@ -28,7 +28,7 @@ const PORT = 3000;
 //INDEX route-- this will list all the routes
 app.get('/missions', (req, res) => {
   res.render('index.ejs', {
-    mission: missions //<--the data
+    missions: missions //<--the data
   })
 });
 
@@ -38,10 +38,9 @@ app.get('/missions', (req, res) => {
 // the view should display all the data for a single mission
 app.get('/missions/:id', (req, res) => {
   res.render('show.ejs', {
-    mission: missions[req.params.id]
+    missions: missions[req.params.id]
   })
 });
-
 
 
 // LISTENER

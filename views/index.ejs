@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Mission</title>
 </head>
 <body>
 	<h1>Index</h1>
+	<ul>
+
+	<% for(let i = 0, len = missionList.length; i < len; i ++){%>
+
+		<li><a href ='/mission/<%=i%>'><%=missionList[i].name%></a></li>
+
+	<%}%>	
+
+	</ul>
 
 </body>
 </html>

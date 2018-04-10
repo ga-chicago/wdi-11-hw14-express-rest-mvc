@@ -2,7 +2,6 @@
 const express = require('express');
 const app = express();
 
-const marsMissions = require('./models/marsMissions.js')
 // run `npm install` to install dependencies in package.json
 
 // * Your mission is to complete the app
@@ -28,13 +27,29 @@ const PORT = 3000;
 // INDEX Route
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
-
-
+app.get('/marsMissions', (req, res) => {
+  res.render('./missions/index.ejs', {
+    missions: marsMissions,
+    pageTitle: "Mars Missions Index"
+  })
+})
+const marsMissions = require('./models/marsMissions.js')
 
 // SHOW Route
 // send data to 'missions/show.ejs' view
 // the view should display all the data for a single mission
+app.get('/marsMissions/:id', (req, res) => {
+  // const index = req.params.id
 
+  // you "Render" templates where you previously just "send"ed data
+  // the data you want to display in your template is the second parameter
+  // your data will ***ALWAYS*** be an object. 
+  // advice: use singular for show page
+  res.render('./missions/show.ejs', {
+    mission: marsMissions[req.params.id]
+  })
+
+})
 
 // LISTENER
 app.listen(PORT, function() {

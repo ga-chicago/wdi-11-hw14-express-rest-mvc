@@ -24,6 +24,14 @@ app.get('/mission/', (req, res)=>{
     missionList: marsMissions 
   })
 })
+
+
+
+app.get('/mission/:id', (req, res)=>{
+  res.render('show.ejs',{
+    mission: marsMissions[req.params.id]
+  })
+})
 // * Bonus: add images to the data and have them display
 // * Bonus: add static css to style the pages
 

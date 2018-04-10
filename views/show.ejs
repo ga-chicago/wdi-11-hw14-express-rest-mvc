@@ -5,12 +5,14 @@
     <title></title>
   </head>
   <body>
-
-    <h1>Mission SHOW</h1>
+    <center>
+    <h1 style = "color:red;">Mission SHOW PAGE</h1>
+    </center>
 
     <%= missions.name %>, a <%= missions.missionType %> vehicle was launched on
     <%= missions.launchDate %> by <%= missions.operator %>.
 
+    <img src= "<%= missions.img %>">
 
 
     <!-- note: the <%= %> tag is for AN EXPRESSION.  -->

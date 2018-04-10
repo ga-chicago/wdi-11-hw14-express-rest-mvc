@@ -12,6 +12,7 @@ const missions = require('./models/marsMissions.js')
 // * Make it so you can click on a mission’s name on the index page, and be taken to that mission’s show page- DONE
 // * Bonus: add images to the data and have them display
 // * Bonus: add static css to style the pages
+
 // NOTES:
 // ejs has not been installed -- DONE
 // views folder has not been created --DONE

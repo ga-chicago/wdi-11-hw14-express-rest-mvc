@@ -6,14 +6,14 @@ const marsMissions = [
     launchDate: "26 Nov 2011",
     operator: "NASA",
     missionType: "Rover",
-    img: ""
+    img: "images/curiosity.jpg"
   },
   {
     name: "Opportunity",
     launchDate: "8 Jul 2003",
     operator: "NASA",
     missionType: "Rover",
-    img: ""
+    img: "images/opportunity.jpg"
   },
   {
     name: "Spirit",

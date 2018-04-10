@@ -22,14 +22,6 @@ app.get('/marsMissions/:id', (req, res) => {
 
 
 
-// SHOW Route
-// send data to 'missions/show.ejs' view
-// the view should display all the data for a single mission
-
-
-// LISTENER
-// PORT
-
 const PORT = 3000;
 app.listen(PORT, function() {
   console.log('Missions to Mars running on port: ' + PORT);

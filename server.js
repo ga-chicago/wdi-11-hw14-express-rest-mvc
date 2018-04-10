@@ -42,6 +42,8 @@ app.get('/missions/:id',(req,res) => {
   })
 })
 
+app.use(express.static('./img'));
+
 // LISTENER
 app.listen(PORT, function() {
   console.log('Missions to Mars running on port: ' + PORT);

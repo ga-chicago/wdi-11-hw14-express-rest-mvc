@@ -40,8 +40,10 @@ app.get('/marsMissions', (req, res) => {
 // the view should display all the data for a single mission
 
 app.get('/marsMissions/:id', (req, res) => {
-  const index = req.params.id
-  res.send(marsMissions[index]) 
+
+  res.render('show.ejs', {
+    mission: marsMissions[req.params.id]
+  }) 
 })
 
 

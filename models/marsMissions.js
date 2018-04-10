@@ -38,4 +38,4 @@ const marsMissions = [
   }
 ];
 
-module_exports: marsMissions;
+module.exports = marsMissions;

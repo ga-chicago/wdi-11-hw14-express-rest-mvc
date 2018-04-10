@@ -2,8 +2,8 @@
 const express = require('express');
 const app = express();
 
-const missions = require('.models/marsMissions.js')
-// run `npm install` to install dependencies in package.json
+const missions = require('./models/marsMissions.js')
+// run `npm install` to install dependencies in package.json--DONE
 
 // * Your mission is to complete the app
 // * The app will need routes for index and show
@@ -12,7 +12,6 @@ const missions = require('.models/marsMissions.js')
 // * Make it so you can click on a mission’s name on the index page, and be taken to that mission’s show page
 // * Bonus: add images to the data and have them display
 // * Bonus: add static css to style the pages
-
 // NOTES:
 // ejs has not been installed -- DONE
 // views folder has not been created --DONE
@@ -27,9 +26,9 @@ const PORT = 3000;
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
 //INDEX route-- this will list all the routes
-app.get('/', (req, res) => {
+app.get('/missions', (req, res) => {
   res.render('index.ejs', {
-    fruits: fruits //<--the data
+    mission: missions //<--the data
   })
 });
 
@@ -37,6 +36,12 @@ app.get('/', (req, res) => {
 // SHOW Route
 // send data to 'missions/show.ejs' view
 // the view should display all the data for a single mission
+app.get('/fruits/:id', (req, res) => {
+  res.render('show.ejs', {
+    mission: missions[req.params.id]
+  })
+});
+
 
 
 // LISTENER

@@ -28,7 +28,9 @@ const marsMissions = require('./models/marsMissions.js');
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
 app.get('/missions',(req,res) => {
-  res.send(marsMissions);
+  res.render('index.ejs',{
+    missions: marsMissions
+  })
 })
 
 // SHOW Route

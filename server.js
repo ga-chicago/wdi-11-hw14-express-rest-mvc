@@ -6,7 +6,7 @@ const missions = require('./models/marsMissions.js')
 // run `npm install` to install dependencies in package.json--DONE
 
 // * Your mission is to complete the app
-// * The app will need routes for index and show
+// * The app will need routes for index and show- DONE
 // * The app will need views for index and show
 //
 // * Make it so you can click on a mission’s name on the index page, and be taken to that mission’s show page
@@ -36,7 +36,7 @@ app.get('/missions', (req, res) => {
 // SHOW Route
 // send data to 'missions/show.ejs' view
 // the view should display all the data for a single mission
-app.get('/fruits/:id', (req, res) => {
+app.get('/missions/:id', (req, res) => {
   res.render('show.ejs', {
     mission: missions[req.params.id]
   })

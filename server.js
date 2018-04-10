@@ -27,6 +27,7 @@ const marsMissions = require('./models/marsMissions.js')
 // INDEX Route
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
+
 app.get('/marsMissions', (req, res) => {
 
   res.render('index.ejs', {
@@ -37,6 +38,11 @@ app.get('/marsMissions', (req, res) => {
 // SHOW Route
 // send data to 'missions/show.ejs' view
 // the view should display all the data for a single mission
+
+app.get('/marsMissions/:id', (req, res) => {
+  const index = req.params.id
+  res.send(marsMissions[index]) 
+})
 
 
 // LISTENER

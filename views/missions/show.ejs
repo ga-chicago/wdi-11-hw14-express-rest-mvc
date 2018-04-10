@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mars Missions show page</title>
+</head>
+<body>
+
+	<h1><%= mission.name %></h1>
+
+	<!-- let's make the template show the data -->
+	<!-- the data that's available to you inside those brackets is whatever you passed over in your res.render parameter -->
+
+	<!-- note: the <%= %> tag is for an EXPRESSION / value / variable, etc.  -->
+	<!-- there is another type of tag, <% %>, which lets you add javascript CODE / logic to your template -->
+
+	<p>Name: <%= mission.name %></p>
+	<p>Launch Date: <%= mission.launchDate %></p>
+	<p>Operator: <%= mission.operator %></p>
+	<p>Mission Type: <%= mission.missionType %></p>
+	<p>Image: <img src ="<%= mission.img %>"></p>
+
+
+	<!-- CREATE A TEMPLATE FOR YOUR INDEX -->
+	<!-- RENDER IT AT THE CORRECT ROUTE -->
+
+</body>
+</html>

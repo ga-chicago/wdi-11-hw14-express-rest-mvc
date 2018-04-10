@@ -36,7 +36,11 @@ app.get('/missions',(req,res) => {
 // SHOW Route
 // send data to 'missions/show.ejs' view
 // the view should display all the data for a single mission
-
+app.get('/missions/:id',(req,res) => {
+  res.render('show.ejs',{
+    mission: marsMissions[req.params.id]
+  })
+})
 
 // LISTENER
 app.listen(PORT, function() {

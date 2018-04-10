@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mission</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+	<h1>Index</h1>
+	<ul>
+
+	<% for(let i = 0, len = missionList.length; i < len; i ++){%>
+
+		<li><a href ='/mission/<%=i%>'><%=missionList[i].name%></a></li>
+
+	<%}%>	
+
+	</ul>
+
+</body>
+</html>

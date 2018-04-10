@@ -2,6 +2,12 @@
 const express = require('express');
 const app = express();
 
+const marsMissions = require('./models/marMission.js');
+
+
+app.get('/Status/',(req, res)=>{
+  res.send('Up and Running!');
+})
 // run `npm install` to install dependencies in package.json
 
 // * Your mission is to complete the app
@@ -9,6 +15,23 @@ const app = express();
 // * The app will need views for index and show
 //
 // * Make it so you can click on a mission’s name on the index page, and be taken to that mission’s show page
+
+
+
+
+app.get('/mission/', (req, res)=>{
+  res.render('index.ejs',{
+    missionList: marsMissions 
+  })
+})
+
+
+
+app.get('/mission/:id', (req, res)=>{
+  res.render('show.ejs',{
+    mission: marsMissions[req.params.id]
+  })
+})
 // * Bonus: add images to the data and have them display
 // * Bonus: add static css to style the pages
 
@@ -20,45 +43,6 @@ const app = express();
 // PORT
 const PORT = 3000;
 
-// DATA - put into marsMissions.js file inside of a models folder, for module.exports
-// remember to require it in the server
-const marsMissions = [
-  {
-    name: "Curiosity",
-    launchDate: "26 Nov 2011",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Opportunity",
-    launchDate: "8 Jul 2003",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Spirit",
-    launchDate: "10 Jun 2003",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Sojourner",
-    launchDate: "4 Dec 1996",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Rosetta",
-    launchDate: "2 Mar 2004",
-    operator: "ESA",
-    missionType: "Gravity Assist",
-    img: ""
-  }
-];
 
 // INDEX Route
 // send data to 'missions/index.ejs' view

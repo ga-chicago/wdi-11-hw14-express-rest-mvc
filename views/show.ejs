@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1> <%= pageTitle %> </h1>
+	<p>
+
+<table style="width:50%">
+
+	<% Object.keys(mission).forEach(function(key) { %>
+	<tr>
+		<td>
+			<%= key %>
+		</td>
+		<% if (key === 'img') { %>
+			<td> 
+				<img src="<%= mission[key] %>">
+			</td>
+		<% } else { %>
+			<td>
+				<%= mission[key] %>
+			</td>
+		<% } %>
+	</tr>
+	<% }) %>
+
+	</p>
+</table>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "name": "afternoon",
   "version": "1.0.0",
-  "description": "",
+  "description": "![ga](https://avatars3.githubusercontent.com/u/12513784?s=200&v=4)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,6 +11,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.3"
-  }
+    "ejs": "^2.5.8",
+    "express": "^4.15.3",
+    "gulp": "^3.9.1",
+    "gulp-less": "^4.0.0",
+    "nodemon": "^1.17.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenCharbonneau/wdi-11-hw14-express-rest-mvc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BenCharbonneau/wdi-11-hw14-express-rest-mvc/issues"
+  },
+  "homepage": "https://github.com/BenCharbonneau/wdi-11-hw14-express-rest-mvc#readme"
 }

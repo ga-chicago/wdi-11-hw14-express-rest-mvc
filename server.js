@@ -22,52 +22,27 @@ const PORT = 3000;
 
 // DATA - put into marsMissions.js file inside of a models folder, for module.exports
 // remember to require it in the server
-const marsMissions = [
-  {
-    name: "Curiosity",
-    launchDate: "26 Nov 2011",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Opportunity",
-    launchDate: "8 Jul 2003",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Spirit",
-    launchDate: "10 Jun 2003",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Sojourner",
-    launchDate: "4 Dec 1996",
-    operator: "NASA",
-    missionType: "Rover",
-    img: ""
-  },
-  {
-    name: "Rosetta",
-    launchDate: "2 Mar 2004",
-    operator: "ESA",
-    missionType: "Gravity Assist",
-    img: ""
-  }
-];
+const marsMissions = require('./models/marsMissions.js');
 
 // INDEX Route
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
+app.get('/missions',(req,res) => {
+  res.render('index.ejs',{
+    missions: marsMissions
+  })
+})
 
 // SHOW Route
 // send data to 'missions/show.ejs' view
 // the view should display all the data for a single mission
+app.get('/missions/:id',(req,res) => {
+  res.render('show.ejs',{
+    mission: marsMissions[req.params.id]
+  })
+})
 
+app.use(express.static('./public'));
 
 // LISTENER
 app.listen(PORT, function() {

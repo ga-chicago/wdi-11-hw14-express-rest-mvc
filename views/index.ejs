@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mars Missions</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<% for (let i = 0; i < missions.length; i++) { %>
+		<p><a href="/missions/<%= i %>"><%= missions[i].name %></a></p>
+	<% } %>
+</body>
+</html>

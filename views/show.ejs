@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= mission.name %></title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<p>Name: <%= mission.name %></p>
+	<p>Launch Date: <%= mission.launchDate %></p>
+	<p>Operator: <%= mission.operator %></p>
+	<p>Mission Type: <%= mission.missionType %></p>
+	<% if (mission.img) {%>
+	   	<img src=<%= mission.img %>>
+	<% } %>
+</body>
+</html>

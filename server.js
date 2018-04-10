@@ -17,8 +17,6 @@ app.get('/marsMissions/:id', (req, res) => {
   })
 })
 
-// * Bonus: add images to the data and have them display
-// * Bonus: add static css to style the pages
 
 
 

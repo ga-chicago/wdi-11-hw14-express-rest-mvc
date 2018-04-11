@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>show page</h1>
+
+	<%= mission.name %>
+
+	<% for (prop in mission) { %>
+		<%= prop %>: <%= mission[prop] %><br>
+	<% } %>
+
+	<%= mission.name%>
+	<%= mission.launchDate%>
+	<%=mission.operator%>
+	<%= mission.missionType%>
+	<%= mission.img%>
+	
+</body>
+</html>
